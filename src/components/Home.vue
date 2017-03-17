@@ -1,13 +1,23 @@
 <template>
   <div class="home">
-    <h1>{{ msg }}</h1>
-    <h2>Home</h2>
+    <side-bar></side-bar>
+    <div class="container">
+      <header></header>
+      <div class="content">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import SideBar from '../components/SideBar.vue'
+
 export default {
   name: 'home',
+  components: { SideBar },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -18,21 +28,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+.container {
+  padding-left: 260px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.container header {
+  background-color: #f8f8f8;
+  height: 120px;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.container .content {
+  padding: 20px;
 }
 </style>
