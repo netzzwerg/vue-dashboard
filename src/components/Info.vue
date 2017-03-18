@@ -1,7 +1,9 @@
 <template>
-  <div class="info">
-    <h1>{{ msg }}</h1>
-    <h2>Info</h2>
+  <div>
+    <header>
+      <h1>{{msg}}</h1>
+    </header>
+    <div class="content"></div>
   </div>
 </template>
 
@@ -10,29 +12,18 @@ export default {
   name: 'info',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Info Page'
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+header h1 {
+  padding-top: 20px;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.container .content {
+  padding: 20px;
 }
 </style>

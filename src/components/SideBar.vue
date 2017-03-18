@@ -1,26 +1,21 @@
 <template>
   <div class="side-bar">
     <header>
-      <router-link to="/">Home</router-link>
-      <router-link to="/info">Info</router-link>
+
     </header>
     <nav-list>
-      <nav-item></nav-item>
-      <nav-item></nav-item>
-      <nav-item></nav-item>
-      <nav-item></nav-item>
-      <nav-item></nav-item>
+      <router-link to="/info" tag="li">Info</router-link>
+      <router-link to="/" tag="li">Home</router-link>
     </nav-list>
   </div>
 </template>
 
 <script>
 import NavList from '../components/NavList.vue'
-import NavItem from '../components/NavItem.vue'
 
 export default {
   name: 'sidebar',
-  components: { NavList, NavItem }
+  components: { NavList }
 }
 </script>
 

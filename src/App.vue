@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <side-bar></side-bar>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import SideBar from './components/SideBar.vue'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: { SideBar }
 }
 </script>
 
@@ -31,4 +37,19 @@ ul, li {
 ul {
   padding-left: 0px;
 }
+
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  padding-left: 260px;
+}
+
+.container header {
+  background-color: #f8f8f8;
+  height: 120px;
+}
+
 </style>
