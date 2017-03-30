@@ -6,6 +6,10 @@
     <div class="content">
       <module-input></module-input>
       <module-output></module-output>
+      <module-input></module-input>
+      <module-output></module-output>
+      <module-input></module-input>
+      <module-output></module-output>
     </div>
   </div>
 </template>

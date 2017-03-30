@@ -1,12 +1,19 @@
 <template>
   <div class="module">
-    <div>counter: <span>0</span></div>
+    <div>counter: 
+      <span class="counter">{{ counter }}</span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'moduleOutput'
+  name: 'moduleOutput',
+  computed: {
+    counter () {
+      return this.$store.state.count
+    }
+  }
 }
 </script>
 
@@ -18,7 +25,7 @@ export default {
   color: #FFF;
   float: left;
   padding: 10px;
-  margin-left: 10px;
+  margin: 10px;
   position: relative;
   width: 25%;
   min-height: 100px;

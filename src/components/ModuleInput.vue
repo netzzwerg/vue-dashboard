@@ -3,25 +3,25 @@
     <div>counter: 
       <span class="counter">{{ counter }}</span>
     </div>
-    <button v-on:click="countUp">+</button>
-    <button v-on:click="countDown">-</button>
+    <button v-on:click="increment">+</button>
+    <button v-on:click="decrement">-</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'moduleInput',
-  data () {
-    return {
-      counter: 0
+  computed: {
+    counter () {
+      return this.$store.state.count
     }
   },
   methods: {
-    countUp () {
-      this.counter += 1
+    increment () {
+      this.$store.commit('increment')
     },
-    countDown () {
-      this.counter -= 1
+    decrement () {
+      this.$store.commit('decrement')
     }
   }
 }
@@ -35,7 +35,7 @@ export default {
   color: #FFF;
   float: left;
   padding: 10px;
-  margin-left: 10px;
+  margin: 10px;
   position: relative;
   width: 25%;
   min-height: 100px;
