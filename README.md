@@ -13,6 +13,9 @@ vue init webpack vue-dashboard
 # install dependencies
 npm install
 
+# build static css files
+gulp sass
+
 # serve with hot reload at localhost:8080
 npm run dev
 

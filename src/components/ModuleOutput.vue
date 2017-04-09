@@ -1,8 +1,6 @@
 <template>
   <div class="module">
-    <div>counter: 
-      <span class="counter">{{ counter }}</span>
-    </div>
+    <h4 class="counter">{{ counter }}</h4>
   </div>
 </template>
 
@@ -19,15 +17,6 @@ export default {
 
 <style scoped>
 .module {
-  font-size: 24px;
-  background-color: #42b983;
-  border-radius: 2px;
-  color: #FFF;
-  float: left;
-  padding: 10px;
-  margin: 10px;
-  position: relative;
-  width: 25%;
-  min-height: 100px;
+  text-align: center;
 }
 </style>
